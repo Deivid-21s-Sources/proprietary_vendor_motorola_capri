@@ -49,8 +49,15 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/capri/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc \
     vendor/motorola/capri/proprietary/vendor/etc/init/android.hardware.nfc@1.2-service-moto.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.nfc@1.2-service-moto.rc \
     vendor/motorola/capri/proprietary/vendor/etc/init/init_thermal-engine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_thermal-engine.rc \
+    vendor/motorola/capri/proprietary/vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf@2.2-service.rc \
     vendor/motorola/capri/proprietary/vendor/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     vendor/motorola/capri/proprietary/vendor/etc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
+    vendor/motorola/capri/proprietary/vendor/etc/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
+    vendor/motorola/capri/proprietary/vendor/etc/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
+    vendor/motorola/capri/proprietary/vendor/etc/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml \
+    vendor/motorola/capri/proprietary/vendor/etc/perf/targetconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetconfig.xml \
+    vendor/motorola/capri/proprietary/vendor/etc/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml \
+    vendor/motorola/capri/proprietary/vendor/etc/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
     vendor/motorola/capri/proprietary/vendor/etc/qdcm_calib_data_mipi_mot_vid_djn_nt36525b_652.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_vid_djn_nt36525b_652.xml \
     vendor/motorola/capri/proprietary/vendor/etc/qdcm_calib_data_mipi_mot_vid_tm_ili9882n_652.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_vid_tm_ili9882n_652.xml \
     vendor/motorola/capri/proprietary/vendor/etc/qdcm_calib_data_mipi_mot_vid_txd_ili7806s_652.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_vid_txd_ili7806s_652.xml \
@@ -150,6 +157,12 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/capri/proprietary/vendor/usr/keylayout/uinput-fpsensor.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpsensor.kl
 
 PRODUCT_PACKAGES += \
+    libperfconfig \
+    libperfgluelayer \
+    libperfioctl \
+    libqti-perfd-client \
+    libqti-perfd \
+    libqti-util \
     libthermalclient \
     com.mot.eeprom.mot_capri_s5k4h7_front_otp \
     com.mot.eeprom.mot_capri_s5k4h7_otp \
@@ -285,4 +298,5 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service-chipone \
     android.hardware.biometrics.fingerprint@2.1-service-fpc \
     fpc_ident \
+    vendor.qti.hardware.perf@2.2-service \
     thermal-engine
